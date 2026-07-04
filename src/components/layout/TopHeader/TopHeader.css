@@ -1,0 +1,15 @@
+.top-header {
+  background: var(--primary);
+  color: var(--text-light);
+  font-size: 14px;
+}
+.top-header .contact-info i {
+  font-size: 1rem;
+}
+.top-header .social-icons a {
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.top-header .social-icons a:hover {
+  color: var(--secondary);
+}

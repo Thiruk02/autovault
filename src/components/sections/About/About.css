@@ -1,0 +1,354 @@
+/* ---------------------------------------------------
+   About Section – Premium Overlapping Layout
+   --------------------------------------------------- */
+
+/* Section wrapper with luxurious spacing */
+.about-section {
+  background: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+/* Two‑column container with vertical centering */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  overflow: visible;
+}
+
+/* Left column – occupies about 45% of the section */
+.left-col {
+  flex: 0 0 48%;
+  max-width: 48%;
+  position: relative;
+  overflow: visible;
+}
+
+/* Increased image wrapper height to around 620px */
+.left-col .image-wrapper {
+  position: relative;
+  width: 640px;
+  height: 540px;
+  overflow: visible;
+}
+
+.left-col .image-wrapper img {
+  border-radius: var(--radius-md);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+/* Large image: around 620px wide and positioned lower-left */
+.left-col .large-img {
+  position: absolute;
+  width: 500px;
+  height: 480px;
+
+  left: 20px;
+  bottom: 0;
+
+  object-fit: cover;
+  z-index: 2;
+}
+
+.left-col .large-img:hover {
+  transform: scale(1.03);
+}
+
+/* Medium image: overlaps only about 35% of the large image from the top-right */
+.left-col .medium-img {
+  position: absolute;
+
+  width: 320px;
+  height: 280px;
+
+  top: -50px;
+  left: 330px;
+
+  object-fit: cover;
+  z-index: 1;
+}
+
+.left-col .medium-img:hover {
+  transform: scale(1.03);
+}
+
+/* Small image: sits outside the left edge so only about 45-50% is visible */
+.left-col .small-img {
+  position: absolute;
+
+  width: 230px;
+  height: 300px;
+
+  left: -120px;
+  top: -50px;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+
+.left-col .small-img:hover {
+  transform: scale(1.03);
+}
+
+/* Floating statistics card overlapping the large image bottom-left */
+.stats-card {
+
+
+  position: absolute;
+
+  left: -40px;
+  bottom: 60px;
+
+  background: #fff;
+
+  padding: 28px 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, .12);
+
+  z-index: 5;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+.stats-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.stats-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Right column – occupies about 55% of the section */
+.right-col {
+
+  flex: 0 0 48%;
+  max-width: 48%;
+
+  padding-left: 20px;
+
+}
+
+.right-col .section-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.right-col .section-title {
+  font-family: 'Outfit', sans-serif;
+  color: var(--secondary);
+  font-size: 58px;
+  /* Reduced to around 58px */
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.right-col .highlight-vehicles {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.right-col .vehicles-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.right-col .about-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  max-width: 520px;
+  /* Elegant, readable width constraint */
+}
+
+/* Learn More rounded button */
+.learn-more-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-light);
+  background: var(--primary);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 36px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 77, 0, 0.2);
+  transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.learn-more-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 77, 0, 0.3);
+}
+
+/* ---------------------------------------------------
+   Responsive Adjustments
+   --------------------------------------------------- */
+
+/* Large screens and tablets */
+@media (max-width: 1200px) {
+  .left-col .image-wrapper {
+    width: 700px;
+    height: 620px;
+  }
+
+  .left-col .large-img {
+    width: 480px;
+    height: 320px;
+    left: 60px;
+  }
+
+  .left-col .medium-img {
+    width: 200px;
+    height: 150px;
+    left: 370px;
+    top: 40px;
+  }
+
+  .left-col .small-img {
+    width: 150px;
+    height: 110px;
+    left: -15px;
+    bottom: 60px;
+  }
+
+  .stats-card {
+    padding: 18px 28px;
+    bottom: -15px;
+    left: 15px;
+  }
+
+  .stats-number {
+    font-size: 30px;
+  }
+
+  .right-col .section-title {
+    font-size: 46px;
+  }
+}
+
+/* Mid-sized tablets and small layouts */
+@media (max-width: 991px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .left-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .right-col {
+    flex: 0 0 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .right-col .about-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .right-col .section-title {
+    font-size: 44px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .left-col {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .left-col .image-wrapper {
+    height: 280px;
+  }
+
+  .left-col .large-img {
+    width: 260px;
+    height: 180px;
+    left: 40px;
+  }
+
+  .left-col .medium-img {
+    width: 120px;
+    height: 90px;
+    left: 220px;
+    top: 30px;
+  }
+
+  .left-col .small-img {
+    width: 100px;
+    height: 80px;
+    left: -5px;
+    bottom: 40px;
+  }
+
+  .stats-card {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    padding: 12px 20px;
+  }
+
+  .stats-card:hover {
+    transform: translate(-50%, -5px);
+  }
+
+  .stats-number {
+    font-size: 26px;
+  }
+
+  .stats-label {
+    font-size: 12px;
+  }
+
+  .right-col .section-title {
+    font-size: 34px;
+  }
+
+  .learn-more-btn {
+    width: 100%;
+  }
+}

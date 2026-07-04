@@ -1,0 +1,323 @@
+/* Header Container */
+.header-container {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background: var(--text-light);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sticky behavior */
+.header-container.is-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.header-container.is-scrolled .top-info-bar {
+  display: none !important;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* 1. Top Information Bar */
+.top-info-bar {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--text-light);
+}
+
+.brand-logo-wrapper .logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  margin-top: 4px;
+}
+
+/* Contact Details */
+.contact-item {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contact-item .icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.contact-item:hover .icon-wrapper {
+  transform: scale(1.1);
+  background: var(--primary-hover);
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-text .label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-text .value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Social Links */
+.follow-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  border-radius: 50%;
+  background: rgba(255, 77, 0, 0.08);
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+/* 2. Main Navigation Bar */
+.main-navigation-bar {
+  padding: 16px 0;
+  background: transparent;
+}
+
+/* Nav Menu Links */
+.nav-menu-links {
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 0;
+}
+
+.nav-menu-link i {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu-link:hover {
+  color: var(--primary);
+}
+
+.nav-menu-item:hover .nav-menu-link i {
+  transform: rotate(180deg);
+}
+
+/* Submenu Dropdowns */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--text-light);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-sm);
+  padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+.nav-menu-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.submenu a:hover {
+  background: var(--light-gray);
+  color: var(--primary);
+  padding-left: 24px;
+}
+
+/* Action Buttons */
+.btn-profile {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--secondary);
+  background: var(--text-light);
+  border: 1px solid var(--border-color);
+  padding: 10px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-profile:hover {
+  background: var(--light-gray);
+  border-color: var(--secondary);
+}
+
+.btn-add-car {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-light);
+  background: var(--primary);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 77, 0, 0.2);
+}
+
+.btn-add-car:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 77, 0, 0.3);
+}
+
+/* Hamburger toggle */
+.hamburger-toggle {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hamburger-toggle span {
+  width: 100%;
+  height: 2px;
+  background: var(--secondary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- Mobile responsiveness --- */
+@media (max-width: 991px) {
+  .nav-menu-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--text-light);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--border-color);
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0;
+    padding: 15px 24px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-menu-links.is-open {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-menu-item {
+    width: 100%;
+  }
+
+  .nav-menu-link {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--light-gray);
+    justify-content: space-between;
+  }
+
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0 0 10px 15px;
+    display: none;
+    border-radius: 0;
+  }
+
+  .nav-menu-item:hover .submenu {
+    display: block;
+  }
+}

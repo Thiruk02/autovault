@@ -1,0 +1,117 @@
+/*==============================
+
+Premium Brands
+
+==============================*/
+
+.premium-brand-section {
+
+    padding: 100px 0;
+
+    background: #fff;
+
+}
+
+.brand-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 28px;
+
+    margin-top: 70px;
+
+}
+
+.brand-box {
+
+    height: 200px;
+
+    border: 1px solid #ededed;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    background: #fff;
+
+}
+
+.brand-box img {
+
+    max-width: 120px;
+
+    max-height: 90px;
+
+    object-fit: contain;
+
+    transition: .35s;
+
+}
+
+.brand-box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+
+    border-color: #ff5a1f;
+
+}
+
+.brand-box:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/*==============================
+
+Responsive
+
+==============================*/
+
+@media(max-width:1200px) {
+
+    .brand-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .brand-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .brand-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .brand-box {
+
+        height: 170px;
+
+    }
+
+}

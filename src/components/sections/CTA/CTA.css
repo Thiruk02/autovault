@@ -1,0 +1,248 @@
+/* ==================================
+   CTA Section
+================================== */
+
+.cta-section {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -110px;
+}
+
+.cta-wrapper {
+
+  background: #ff5a1f;
+
+  border-radius: 35px;
+
+  padding: 70px 80px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 25px 60px rgba(255, 90, 31, .30);
+
+}
+
+/* Decorative Circles */
+
+.circle {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .08);
+
+}
+
+.circle.one {
+
+  width: 300px;
+  height: 300px;
+
+  top: -140px;
+  right: -80px;
+
+}
+
+.circle.two {
+
+  width: 170px;
+  height: 170px;
+
+  bottom: -70px;
+  left: 45%;
+
+}
+
+/* Left */
+
+.cta-subtitle {
+
+  color: #fff;
+
+  letter-spacing: 2px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  display: block;
+
+  margin-bottom: 15px;
+
+}
+
+.cta-content h2 {
+
+  color: #fff;
+
+  font-size: 54px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  margin: 0;
+
+}
+
+/* Right */
+
+.cta-phone {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  z-index: 2;
+
+}
+
+.phone-icon {
+
+  width: 85px;
+
+  height: 85px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #ff5a1f;
+
+  font-size: 34px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+}
+
+.cta-phone span {
+
+  color: #fff;
+
+  opacity: .9;
+
+  font-size: 15px;
+
+}
+
+.cta-phone h3 {
+
+  color: #fff;
+
+  font-size: 34px;
+
+  margin-top: 8px;
+
+  font-weight: 700;
+
+}
+
+/* Hover */
+
+.phone-icon {
+
+  transition: .35s;
+
+}
+
+.phone-icon:hover {
+
+  transform: rotate(12deg) scale(1.08);
+
+}
+
+/* Responsive */
+
+@media(max-width:992px) {
+
+  .cta-wrapper {
+
+    flex-direction: column;
+
+    gap: 40px;
+
+    text-align: center;
+
+    padding: 60px 35px;
+
+  }
+
+  .cta-content h2 {
+
+    font-size: 42px;
+
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .cta-content h2 {
+
+    font-size: 34px;
+
+  }
+
+  .cta-phone {
+
+    flex-direction: column;
+
+  }
+
+  .cta-phone h3 {
+
+    font-size: 28px;
+
+  }
+
+}
+
+@media(max-width:576px) {
+
+  .cta-wrapper {
+
+    border-radius: 25px;
+
+    padding: 40px 25px;
+
+  }
+
+  .cta-content h2 {
+
+    font-size: 28px;
+
+  }
+
+  .phone-icon {
+
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+
+  }
+
+  .phone-icon h3 {
+
+    font-size: 24px;
+
+  }
+
+}
