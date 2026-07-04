@@ -50,3 +50,37 @@
 .play-btn i {
     margin-left: 4px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .video-image {
+        height: 480px;
+    }
+    .play-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-image {
+        height: 380px;
+    }
+    .play-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-image {
+        height: 250px;
+    }
+    .play-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+}

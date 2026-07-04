@@ -236,6 +236,12 @@
    Responsive
 =================================== */
 
+@media (max-width: 1200px) {
+    .footer-grid {
+        gap: 40px !important;
+    }
+}
+
 @media(max-width:992px) {
 
     .footer-grid {
@@ -247,14 +253,6 @@
         flex-direction: column;
         gap: 25px;
         text-align: center;
-    }
-
-    .newsletter {
-        flex-direction: column;
-    }
-
-    .newsletter button {
-        height: 55px;
     }
 
 }
@@ -272,14 +270,6 @@
     .footer-links h4,
     .footer-contact h4 {
         font-size: 20px;
-    }
-
-    .newsletter input {
-        height: 50px;
-    }
-
-    .newsletter button {
-        height: 50px;
     }
 
     .socials {

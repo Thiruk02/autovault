@@ -321,3 +321,15 @@
     display: block;
   }
 }
+
+@media (max-width: 1200px) {
+  .nav-menu-links {
+    gap: 16px !important;
+  }
+  .contact-details {
+    gap: 15px !important;
+  }
+  .social-links {
+    gap: 10px !important;
+  }
+}

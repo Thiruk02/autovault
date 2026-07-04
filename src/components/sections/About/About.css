@@ -218,41 +218,18 @@
    Responsive Adjustments
    --------------------------------------------------- */
 
-/* Large screens and tablets */
+/* ---------------------------------------------------
+   Responsive Adjustments
+   --------------------------------------------------- */
+
+/* Laptop / Small Laptop Viewports */
 @media (max-width: 1200px) {
   .left-col .image-wrapper {
-    width: 700px;
-    height: 620px;
-  }
-
-  .left-col .large-img {
-    width: 480px;
-    height: 320px;
-    left: 60px;
-  }
-
-  .left-col .medium-img {
-    width: 200px;
-    height: 150px;
-    left: 370px;
-    top: 40px;
-  }
-
-  .left-col .small-img {
-    width: 150px;
-    height: 110px;
-    left: -15px;
-    bottom: 60px;
-  }
-
-  .stats-card {
-    padding: 18px 28px;
-    bottom: -15px;
-    left: 15px;
-  }
-
-  .stats-number {
-    font-size: 30px;
+    transform: scale(0.75);
+    transform-origin: left top;
+    margin-bottom: -135px;
+    width: 640px;
+    height: 540px;
   }
 
   .right-col .section-title {
@@ -260,7 +237,7 @@
   }
 }
 
-/* Mid-sized tablets and small layouts */
+/* Tablet Viewports */
 @media (max-width: 991px) {
   .about-content {
     flex-direction: column;
@@ -272,6 +249,16 @@
     flex: 0 0 100%;
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-col .image-wrapper {
+    transform: scale(0.75);
+    transform-origin: center top;
+    margin: 0 auto -135px;
+    width: 640px;
+    height: 540px;
   }
 
   .right-col {
@@ -286,11 +273,11 @@
   }
 
   .right-col .section-title {
-    font-size: 44px;
+    font-size: 38px;
   }
 }
 
-/* Mobile screens */
+/* Mobile Viewports */
 @media (max-width: 576px) {
   .about-section {
     padding: 60px 0;
@@ -298,54 +285,38 @@
 
   .left-col {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .left-col .image-wrapper {
-    height: 280px;
-  }
-
-  .left-col .large-img {
-    width: 260px;
-    height: 180px;
-    left: 40px;
-  }
-
-  .left-col .medium-img {
-    width: 120px;
-    height: 90px;
-    left: 220px;
-    top: 30px;
-  }
-
-  .left-col .small-img {
-    width: 100px;
-    height: 80px;
-    left: -5px;
-    bottom: 40px;
+    transform: scale(0.5);
+    transform-origin: center top;
+    margin: 0 auto -270px;
+    width: 640px;
+    height: 540px;
   }
 
   .stats-card {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -15px;
-    padding: 12px 20px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 20px !important;
+    padding: 18px 28px !important;
   }
 
   .stats-card:hover {
-    transform: translate(-50%, -5px);
+    transform: translate(-50%, -5px) !important;
   }
 
   .stats-number {
-    font-size: 26px;
+    font-size: 28px !important;
   }
 
   .stats-label {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
   .right-col .section-title {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .learn-more-btn {

@@ -478,6 +478,11 @@
 
   }
 
+  .center-card img, .center-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .details-card {
 
     width: 100%;
